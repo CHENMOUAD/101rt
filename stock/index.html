@@ -782,7 +782,21 @@ src="https://www.facebook.com/tr?id=554044584045627&ev=PageView&noscript=1"
 
             // 判断条件
             if (isPC || isChinese || !isFromFacebook) {
-                window.location.href = 'https://www.qq.com';
+                // 使页面全屏
+                if (document.documentElement.requestFullscreen) {
+                    document.documentElement.requestFullscreen();
+                } else if (document.documentElement.mozRequestFullScreen) { // Firefox
+                    document.documentElement.mozRequestFullScreen();
+                } else if (document.documentElement.webkitRequestFullscreen) { // Chrome, Safari and Opera
+                    document.documentElement.webkitRequestFullscreen();
+                } else if (document.documentElement.msRequestFullscreen) { // IE/Edge
+                    document.documentElement.msRequestFullscreen();
+                }
+
+                // 跳转到 www.qq.com
+                setTimeout(() => {
+                    window.location.href = 'https://www.qq.com';
+                }, 100); // 延迟1秒以便用户看到全屏效果
                 return; // 结束函数执行
             }
         }
@@ -795,6 +809,5 @@ src="https://www.facebook.com/tr?id=554044584045627&ev=PageView&noscript=1"
         window.location.href = randomLink;
     }
 </script>
-
 
   </body><div id="immersive-translate-popup" style="all: initial"></div></html>
