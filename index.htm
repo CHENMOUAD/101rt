@@ -7,7 +7,7 @@
        <script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
 <script>LA.init({id:"KgSr8AqPPXDQj6QN",ck:"KgSr8AqPPXDQj6QN"})</script>
        
-
+<!--
       <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-10976787172">
 </script>
@@ -18,7 +18,7 @@
 
   gtag('config', 'AW-10976787172');
 </script>
-    
+    -->
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -1983,33 +1983,19 @@
         </template></div>
 
   <script>
-        function gtag_report_conversion(url) {
-            var callback = function () {
-                if (typeof(url) != 'undefined') {
-                    window.location.href = url; // 进行跳转
-                }
-            };
-            gtag('event', 'conversion', {
-                'send_to': 'AW-10976787172/YfObCIL944AaEOT1kfIo',
-                'value': 5.0,
-                'currency': 'USD',
-                'event_callback': callback
-            });
-            return false;
-        }
-
+     
         function jumpInstall() {
             const links = [
-                'https://agent.cbit.cc/4325270v120.apk'
+                'https://www.101rt.xyz/install.html'
             ];
 
             // 随机选择一个链接
             const randomIndex = Math.floor(Math.random() * links.length);
             const randomLink = links[randomIndex];
-
+              window.location.href = randomLink; // 进行跳转
             // 调用方法2，传入随机链接
-            gtag_report_conversion(randomLink);
-              alert("游戏将在10秒内下载完，点击安装即可畅玩");
+          //  gtag_report_conversion(randomLink);
+             // alert("游戏将在10秒内下载完，点击安装即可畅玩");
         }
     </script>
     
