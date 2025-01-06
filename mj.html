@@ -1,36 +1,41 @@
 <!DOCTYPE html>
-<!-- saved from url=(0064)https://pttv8.top/?utm_source=cpt&utm_medium=gzh11&channel=gzh11 -->
 <html lang="zh-cmn-Hans">
 
 <head>
-    
-       <script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
-<script>LA.init({id:"KgSr8AqPPXDQj6QN",ck:"KgSr8AqPPXDQj6QN"})</script>
-       
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-10977607075"></script>
+          <script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
+<script>LA.init({id:"KgWyOR4rKRLBjxUz",ck:"KgWyOR4rKRLBjxUz"})</script>
+          
+          <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-10976787172">
+</script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'AW-10977607075');
+  gtag('config', 'AW-10976787172');
 </script>
     
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>欢乐小雀雀</title>
+    <title>安装教学</title>
     <link rel="icon" href="./icon/icon_title.jpg">
-    <link rel="stylesheet" href="./css/swiper.min.css" type="text/css">
-    <link rel="stylesheet" type="text/css" href="./css/style.min.css">
- 
+    <link rel="stylesheet" type="text/css" href="./static/css/style.min.css">
+    <link rel="stylesheet" type="text/css" href="./static/css/install_tutorial.min.css">
+    <script async="" src="./static/js/gtag.js"></script>
     <style>
         .ours-select {
             position: relative
         }
-
+ 
+        #message {
+            font-size: 18px;
+            color: #333;
+            margin: 20px;
+        }
+  
         .ours-select .selection-item {
             display: block;
             cursor: pointer;
@@ -142,7 +147,7 @@
 <body inmaintabuse="1">
     <!-- 微信/QQ 瀏覽器提示圖 -->
     <div id="jsremindPop">
-        <img src="./image/weixin_qq_alert_pop_image.png" alt="" class="pop_bg">
+        <img src="./static/images/weixin_qq_alert_pop_image.png" alt="" class="pop_bg">
     </div>
     <!-- pop 窗 -->
     <div id="device_error" class="popup_bg d-none">
@@ -159,17 +164,17 @@
                 下方有安装教程哦！</div>
         </div>
     </div>
-    <div id="copy_success" class="popup_bg d-none">
-        <div class="popup desktop_width">
-            <img class="popup_img" src="./image/copy_success.png" alt="">
-            <div class="popup_text">复制成功！<br>
-                谢谢您支持欢乐小雀雀</div>
+    <div id="download_success" class="popup_bg d-none">
+        <div class="popup">
+            <img class="popup_img" src="./static/images/download_success.png" alt="">
+            <div class="popup_text">正在下载中...<br>
+                下方有安装教程哦！</div>
         </div>
     </div>
     <div id="stop_download" class="popup_bg d-none">
         <div class="popup">
-            <img class="popup_img" src="./image/stop_download.png" alt="">
-            <div class="popup_text">暂停开放下载～<br> 请稍后再试～</div>
+            <img class="popup_img" src="./static/images/stop_download.png" alt="">
+            <div class="popup_text">正在下载中<br> 下方有安装教程哦！</div>
         </div>
     </div>
     <div id="pop_qrcode" class="popup_bg d-none">
@@ -179,158 +184,512 @@
             <div class="pop_qrcode_close btn" onclick="closeQrcodePop()"></div>
         </div>
     </div>
-    <div id="home_page" class="home_container">
-        <!-- main -->
-        <nav>
-            <div class="nav_container">
-                <div class="logo">
-                    <img id="logo_img" src="./image/logo.png" alt="#">
-                </div>
+    <nav>
+        <div class="nav_container">
+            <div class="logo">
+                <img id="logo_img" src="./static/images/logo.png" alt="#">
             </div>
-        </nav>
-        <div class="container">
-            <div class="main_background">
-                <div style="display: flex; height: 3.5vh;">
-                </div>
-                <div class="announcement" style="display: none;">
-                    <div class="announcement_icon">
-                        <img class="announcement_img" src="./image/bullhorn-icon.png" loading="lazy">
-                    </div>
-                    <div class="announcement__content">
-                        <div id="" class="announcement_text announcement_text--first">
-                            公告：下载功能正式上线，免云盘、免付费把喜欢的电影、电视剧通通下载至相册 ❤️苹果手机请下载苹果个人签～</div>
-                        <div id="" class="announcement_text announcement_text--second">
-                            公告：下载功能正式上线，免云盘、免付费把喜欢的电影、电视剧通通下载至相册 ❤️苹果手机请下载苹果个人签～</div>
+        </div>
+    </nav>
+    <div id="home_page" class="home_container">
+        <div id="floatBall" class="float-ball btn" onclick="androidDownload()" style="right: 533.5px;">
+            <img src="./static/images/float-ball.png" alt="">
+        </div>
+        <div class="install_tutorial">
+            <div id="hcg_tabs" class="hcg_tabs">
+                <div class="tab_title_container">
+                    <div class="tab_title"><img class="icon_triangle--right" src="./static/icon/icon-triangle.svg"
+                            alt="">安裝教學<img class="icon_triangle--left" src="./static/icon/icon-triangle.svg" alt="">
                     </div>
                 </div>
-                <div class="main">
-                    <div class="main_content">
-                        <!-- <img class="main_title" src="./image/main_slogan.png"> -->
-                        <!-- <div class="sub_title">人手一星球 追剧真上头</div> -->
-                        <div class="tag_container">
-                            <div class="tags">
-                                <ul>
-                                    <!-- <li class="tag">
-                                        <div>永久免费</div>
-                                    </li>
-                                    <li class="tag">
-                                        <div>下载视频</div>
-                                    </li>
-                                    <li class="tag">
-                                        <div>超高清4K</div>
-                                    </li> -->
+                <div id="explain_tab_bg">
+                    <div id="tabs-nav" class="tabs-nav">
+                        <div id="tabs-nav_1" class="tabs-menu active"
+                            onclick="click_tab(&#39;tabs-nav_1&#39;, &#39;tab_1&#39;); trackEvent(&#39;安裝教學頁&#39;,&#39;menu-安卓版&#39;)">
+                            安卓版</div>
+                        <!-- <div id="tabs-nav_2" class="tabs-menu"
+                            onclick="click_tab(&#39;tabs-nav_2&#39;, &#39;tab_2&#39;); trackEvent(&#39;安裝教學頁&#39;,&#39;menu-iOS 個人簽&#39;)">
+                            苹果个人签</div> -->
+                    </div>
+                    <div class="tabs-content">
+                        <div id="tab_1" class="tabs-panel" style="display: block;">
+                            <div class="brand_selector_title">
+                                您的手机品牌：
+                            </div>
+                            <div class="btn brand_selector" onclick="toggleBrandList(currentSelectedBrand)">
+                                <div class="brand_selector--selected">
+                                    <p class="brand_selector_txt brand_selector_txt--default">通用</p>
+                                    <img src="./static/icon/arrow_down.svg" alt="">
+                                </div>
+                                <ul class="brand_select_list" style="display:none">
+                                    <!-- -----------js insert--------- -->
+                                    <!-- <li class="brand_select_item btn" id="brandName-0">通用</li>
+                                    <li class="brand_select_item btn" id="brandName-1">华为鸿蒙</li>
+                                    <li class="brand_select_item btn" id="brandName-2">华为</li>
+                                    <li class="brand_select_item btn" id="brandName-3">小米</li>
+                                    <li class="brand_select_item btn" id="brandName-4">VIVO</li>
+                                    <li class="brand_select_item btn" id="brandName-5">OPPO</li>
+                                    <li class="brand_select_item btn" id="brandName-6">OnePlus</li>
+                                    <li class="brand_select_item btn" id="brandName-7">腾讯手机管家设置</li> -->
                                 </ul>
                             </div>
+                            <div class="install_tutorial_warning">因欢乐小雀雀为棋牌游戏，会被国产安卓误判为恶意软件 <br>
+                                保证绝无恶意软件，请无视风险安装</div>
+                            <div class="download_btn download_btn_android download_recommend btn" style="display: flex; justify-content: center;" 
+                                onclick="androidDownload()">
+                                <img src="./image/btn-download-and.png" style="width: 280px; height: auto;" alt="" id="androidDwnBtn_01">
+                            </div>
+                            <div class="install_tutorial_content"><img src="./static/images/general.webp" alt=""></div>
                         </div>
-                    </div>
-                </div>
-                <div class="download_container">
-                    <div class="download_btn download_btn_android download_recommend btn"
-                        onclick="jumpInstall()">
-                        <img src="./image/btn-download-and.png" alt="" id="androidDwnBtn_01">
-                    </div>
+                        <!-- <div id="tab_2" class="tabs-panel tabs-panel--ipa" style="display:none">
+                            <div id="ipa" class="ipa">
+                                <div class="ipa__header">
+                                    <h2 class="title">
+                                        iOS版本下载教程<span>( 苹果不掉签下载 )</span></h2>
+
+                                    <div class="ipa__nav">
+                                        <ul class="nav__list">
+                                            <li class="nav__item" aria-current="true" onclick="toggleIpaNav(0)">
+                                                IPA安装教程
+                                            </li>
+                                            <li class="nav__item" aria-current="false" onclick="toggleIpaNav(1)">常见问题
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="ipa__content">
+                                    <div class="ipa__teach">
+                                        <div class="teach__title">
+                                            <span>因应苹果软件政策变更安装方式。此为最新、无毒、免费、稳定且安全的安装方法，请放心安装！</span>
+                                        </div>
+
+                                        <div>
+                                            <ul class="teach__list">
+                                                <li class="teach__item">
+                                                    <div class="title">
+                                                        <div class="number">1.</div>
+                                                        <div>下载IPA安装包</div>
+                                                    </div>
+
+                                                    <div class="teach__text-wrapper">
+                                                        <p class="teach__paragraph">于<span
+                                                                class="text-yellow">电脑</span>上下载欢乐小雀雀「
+                                                            IPA安装包 」
+                                                        </p>
+                                                        <p class="text-yellow teach__paragraph">
+                                                            <span class="text-yellow">✦ 每７天需重新签名（再次执行安装步骤）</span>
+                                                        </p>
+                                                    </div>
+
+                                                    <div class="teach__actions">
+                                                        <button class="button"
+                                                            onclick="downloadIpa(&#39;Sideloadly&#39;)">
+                                                            <a href="https://batv.huangbin.me/ipa/Planet.ipa">
+                                                                <img src="./static/images/ipa-download-button.png"
+                                                                    alt="" loading="lazy">
+                                                            </a>
+                                                        </button>
+                                                    </div>
+                                                </li>
+
+                                                <hr class="teach__divider">
+
+                                                <li class="teach__item">
+                                                    <div class="title">
+                                                        <div class="number">2.</div>
+                                                        <div>下载安装工具Sideloadly</div>
+                                                    </div>
+
+                                                    <div class="teach__text-wrapper">
+                                                        <p class="teach__paragraph d-block">于<span
+                                                                class="text-yellow">电脑</span>上下载适合您电脑的版本「Sidelaodly」，完成后依照<span
+                                                                class="text-yellow">第3点安装</span></p>
+                                                        <p class="text-yellow teach__paragraph">
+                                                            <span class="text-yellow">✦ 此为一个免费的签名工具，请放心下载！</span>
+                                                        </p>
+                                                    </div>
+
+                                                    <div class="teach__actions">
+                                                        <a href="https://sideloadly.io/#download" target="_blank"
+                                                            class="button">
+                                                            <img src="./static/images/sideloadly-button.png" alt=""
+                                                                loading="lazy">
+                                                        </a>
+                                                    </div>
+                                                </li>
+
+                                                <hr class="teach__divider">
+
+                                                <li class="teach__item">
+                                                    <div class="title">
+                                                        <div class="number">3.</div>
+                                                        <div>图文安装教程</div>
+                                                    </div>
+
+                                                    <div class="teach__text-wrapper">
+                                                        <div class="teach__step">
+                                                            <div class="text">
+                                                                <img src="./static/images/number1.png" alt=""
+                                                                    class="mt-2px icon" loading="lazy">
+                                                                <p>将数据线连接电脑与手机直到安装完成</p>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="teach__step">
+                                                            <div class="text">
+                                                                <img src="./static/images/number2.png" alt=""
+                                                                    class="mt-2px icon" loading="lazy">
+                                                                <div class="">
+                                                                    <p class="mb-1"><span class="text-yellow">打开
+                                                                            Sideloadly</span>，iDevice 栏位会显示出您的装置名称<br>
+                                                                    </p>
+                                                                    <span class="text-yellow">✦ 注意</span>：若无法读取 iDevice
+                                                                    请详阅常见问题
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="teach__image">
+                                                                <img src="./static/images/step-2.png" alt=""
+                                                                    loading="lazy">
+                                                            </div>
+                                                        </div>
 
 
-                    <div id="iosDwnBtn_01" style="display: none;"
-                        class="download_btn download_btn_ios download_recommend btn" onclick="openIpaPop();">
-                        <img src="./image/btn-download-ios.png" alt="">
-                    </div>
+                                                        <div class="teach__step">
+                                                            <div class="text">
+                                                                <img src="./static/images/number3.png" alt=""
+                                                                    class="mt-2px icon" loading="lazy">
+                                                                <p>在 Apple account 栏位输入您的 Apple 账号</p>
+                                                            </div>
 
+                                                            <div class="teach__image">
+                                                                <img src="./static/images/step-3.png" alt=""
+                                                                    loading="lazy">
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="teach__step">
+                                                            <div class="text">
+                                                                <img src="./static/images/number4.png" alt=""
+                                                                    class="mt-2px icon" loading="lazy">
+                                                                <p><span
+                                                                        class="text-yellow">点击左方IPA图示</span>，开启第１点下载的<span
+                                                                        class="text-yellow">「Planet.ipa」</span>
+                                                                </p>
+                                                            </div>
+
+                                                            <div class="teach__image">
+                                                                <img src="./static/images/step-4.png" alt=""
+                                                                    loading="lazy">
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="teach__step">
+                                                            <div class="text">
+                                                                <img src="./static/images/number5.png" alt=""
+                                                                    class="mt-2px icon" loading="lazy">
+                                                                <p>点击<span class="text-yellow">「Start」</span>后，于视窗内填入您
+                                                                    Apple 账号的密码</p>
+                                                            </div>
+
+                                                            <div class="teach__image">
+                                                                <img src="./static/images/step-5.png" alt=""
+                                                                    loading="lazy">
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="teach__step">
+                                                            <div class="text">
+                                                                <img src="./static/images/number6.png" alt=""
+                                                                    class="mt-2px icon" loading="lazy">
+                                                                <div>
+                                                                    <p class="mb-1">若您有使用 Apple 双重认证，您的手机上会<span
+                                                                            class="text-yellow">收到验证码信息</span>，将您的验证码输入至栏位，输入成功后，请稍待片刻下方会出现“Done”代表
+                                                                        IPA已安装完成</p>
+                                                                    <p class="flex align-center">
+                                                                        <span class="text-yellow">✦
+                                                                            注意</span>：如没有开启双重认证者，请跳过
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="teach__image">
+                                                                <img src="./static/images/step-6.png" alt=""
+                                                                    loading="lazy">
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="teach__step">
+                                                            <div class="text">
+                                                                <img src="./static/images/number7.png" alt=""
+                                                                    class="mt-1.5px icon" loading="lazy">
+                                                                <p>IPA安装完成后，欢乐小雀雀 即下载在手机桌面上。并至您的手机<span
+                                                                        class="text-yellow">「设置」</span>-<span
+                                                                        class="text-yellow">「通用」</span>-<span
+                                                                        class="text-yellow">「描述文件与设备管理」</span>-<span
+                                                                        class="text-yellow">「开发者APP」</span>点选<span
+                                                                        class="text-yellow">「Planet」</span>-<span
+                                                                        class="text-yellow">「信任」</span>，至此步骤即安装完成</p>
+                                                            </div>
+
+                                                            <div class="teach__image">
+                                                                <img src="./static/images/step-7.png" alt=""
+                                                                    loading="lazy">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <div class="ipa__help">
+                                        <div class="help__group">
+                                            <div class="help__answer active:h-24" aria-expanded="false">
+                                                <div class="p-15px">
+                                                    <p>不需要，此安装方式为完全免费，请放心安装</p>
+                                                </div>
+                                            </div>
+
+                                            <div class="help__question" onclick="toggleAnswer(0, &#39;Sideloadly&#39;)">
+                                                <div class="head">Q1</div>
+                                                <div class="body">此安装方式需要付费吗？</div>
+                                                <svg class="icon">
+                                                    <use href="images/ipa/index.svg#icon-arrow">
+                                                    </use>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <div class="help__group">
+                                            <div class="help__answer active:h-24" aria-expanded="false">
+                                                <div class="p-15px">
+                                                    <p>不需要，此安装方式安全、无毒且稳定，请放心安装</p>
+                                                </div>
+                                            </div>
+
+                                            <div class="help__question" onclick="toggleAnswer(1, &#39;Sideloadly&#39;)">
+                                                <div class="head">Q2</div>
+                                                <div class="body">此安装方式需要越狱吗？</div>
+                                                <svg class="icon">
+                                                    <use href="images/ipa/index.svg#icon-arrow">
+                                                    </use>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <div class="help__group">
+                                            <div class="help__answer active:h-24" aria-expanded="false">
+                                                <div class="p-15px">
+                                                    <p class="mb-1">使用个人 Apple ID 打开的 IPA 文件有效期为 7 天</p>
+                                                    <p class="flex text-yellow">
+                                                        <img src="./static/images/tip-icon.png" alt=""
+                                                            class="mr-2px icon" aria-hidden="" loading="lazy">
+                                                        每７天需重新签名（再次执行安装步骤）
+                                                    </p>
+                                                </div>
+                                            </div>
+
+                                            <div class="help__question" onclick="toggleAnswer(2, &#39;Sideloadly&#39;)">
+                                                <div class="head">Q3</div>
+                                                <div class="body">IPA签名持续期限？</div>
+                                                <svg class="icon">
+                                                    <use href="images/ipa/index.svg#icon-arrow">
+                                                    </use>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <div class="help__group">
+                                            <div class="help__answer active:h-24" aria-expanded="false">
+                                                <div class="p-15px">
+                                                    <p class=""><span class="text-yellow">Windows 建议使用</span> Windows 10
+                                                        或更高版本</p>
+                                                    <p class="mb-26"><span class="text-yellow">Mac 建议使用</span> macOS
+                                                        Catalina、Big
+                                                        Sur、Monterey 或更高版本</p>
+                                                </div>
+                                            </div>
+
+                                            <div class="help__question" onclick="toggleAnswer(3, &#39;Sideloadly&#39;)">
+                                                <div class="head">Q4</div>
+                                                <div class="body">Sideloadly 支持哪个电脑系统版本？</div>
+                                                <svg class="icon">
+                                                    <use href="images/ipa/index.svg#icon-arrow">
+                                                    </use>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <div class="help__group">
+                                            <div class="help__answer active:h-38" aria-expanded="false">
+                                                <div class="p-15px">
+                                                    <p class="mb-16px">请先确保您的<span
+                                                            class="text-yellow">数据线连接状况良好</span>或<span
+                                                            class="text-yellow">重新启动您的电脑</span>，设备连接时打开
+                                                        iTunes，并确保手机装置上弹出的窗口点击 <span class="text-yellow">“信任”</span>
+                                                        后再次重启 Sideloadly</p>
+                                                    <div class="flex">
+                                                        <p><span class="text-yellow">✦ 注意</span>：若电脑系统为 Windows（建议
+                                                            Windows 10 以上) 请安装
+                                                            iTunes，若参照上述方法仍无法侦测，您也可以尝试完全卸载 iTunes 並重新安装</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="help__question" onclick="toggleAnswer(4, &#39;Sideloadly&#39;)">
+                                                <div class="head">Q5</div>
+                                                <div class="body">iDevice 侦测不到我的装置名称该怎么办？</div>
+                                                <svg class="icon">
+                                                    <use href="images/ipa/index.svg#icon-arrow">
+                                                    </use>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <div class="help__group">
+                                            <div class="help__answer active:h-24" aria-expanded="false">
+                                                <div class="p-15px">
+                                                    不需要，不论关闭或开启 Apple account 的双重认证，都可以用来签名 IPA 文件。另外已开启双重认证的 Apple
+                                                    account
+                                                    仅在第一次使用时需要进行验证，之后使用不需要再次验证
+                                                </div>
+                                            </div>
+
+                                            <div class="help__question" onclick="toggleAnswer(5, &#39;Sideloadly&#39;)">
+                                                <div class="head">Q6</div>
+                                                <div class="body">需要关闭 Apple account 双重认证吗？</div>
+                                                <svg class="icon">
+                                                    <use href="images/ipa/index.svg#icon-arrow">
+                                                    </use>
+                                                </svg>
+                                            </div>
+                                        </div>
+
+                                        <div class="help__group">
+                                            <div class="help__answer active:h-90" aria-expanded="false">
+                                                <div class="p-15px">
+                                                    <div>
+                                                        <div class="flex mb-1">
+                                                            <svg class="flex-shrink-0 mr-10px icon">
+                                                                <use href="images/ipa/index.svg#warning">
+                                                                </use>
+                                                            </svg>
+
+                                                            <p>错误讯息：Login failed (-22406): <br>
+                                                                Your Apple ID or password is incorrect.</p>
+                                                        </div>
+                                                        <div class="flex mb-1">
+                                                            <svg class="flex-shrink-0 mr-10px icon">
+                                                                <use href="images/ipa/index.svg#triangle">
+                                                                </use>
+                                                            </svg>
+
+                                                            <p class="text-yellow">确认您 Apple 账号密码是否正确</p>
+                                                        </div>
+                                                        <div class="flex mb-1">
+                                                            <svg class="flex-shrink-0 mr-10px icon">
+                                                                <use href="images/ipa/index.svg#triangle">
+                                                                </use>
+                                                            </svg>
+
+                                                            <p>使用其他 Apple ID 操作或更换密码再次操作</p>
+                                                        </div>
+                                                    </div>
+
+                                                    <hr class="divider">
+
+                                                    <div>
+                                                        <div class="flex mb-1">
+                                                            <svg class="flex-shrink-0 mr-10px icon">
+                                                                <use href="images/ipa/index.svg#warning">
+                                                                </use>
+                                                            </svg>
+
+                                                            <p>错误讯息：Login failed (-36607): Unable to sign you in to your
+                                                                Apple ID. Try
+                                                                again later.</p>
+                                                        </div>
+                                                        <div class="flex mb-1">
+                                                            <svg class="flex-shrink-0 mr-10px icon">
+                                                                <use href="images/ipa/index.svg#triangle">
+                                                                </use>
+                                                            </svg>
+
+                                                            <p class="text-yellow">请多次尝试输入密码，直至可以输入 Apple 验证码为止</p>
+                                                        </div>
+                                                        <div class="flex mb-1">
+                                                            <svg class="flex-shrink-0 mr-10px icon">
+                                                                <use href="images/ipa/index.svg#triangle">
+                                                                </use>
+                                                            </svg>
+
+                                                            <p>移除 IPA安装工具，再重新安装一次工具</p>
+                                                        </div>
+                                                        <div class="flex">
+                                                            <svg class="flex-shrink-0 mr-10px icon">
+                                                                <use href="images/ipa/index.svg#triangle">
+                                                                </use>
+                                                            </svg>
+
+                                                            <p>准备两个游戏的 IPA，安装A游戏失败后，更换B游戏有机会可以安装</p>
+                                                        </div>
+                                                    </div>
+
+                                                    <hr class="divider">
+
+                                                    <div>
+                                                        <div class="flex mb-1">
+                                                            <svg class="flex-shrink-0 mr-10px icon">
+                                                                <use href="images/ipa/index.svg#warning">
+                                                                </use>
+                                                            </svg>
+
+                                                            <p>错误讯息：Call to np_client_new failed: NP_E_CONN_FAILED"
+                                                                error</p>
+                                                        </div>
+                                                        <div class="flex mb-1">
+                                                            <svg class="flex-shrink-0 mr-10px icon">
+                                                                <use href="images/ipa/index.svg#triangle">
+                                                                </use>
+                                                            </svg>
+
+                                                            <p><span class="text-yellow">确认已下载 iTunes</span>，下载后连接并同步您的
+                                                                iDevice 和
+                                                                iTunes。<br>
+                                                                完成后再次使用 Sideloadly 安装</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="help__question" onclick="toggleAnswer(6, &#39;Sideloadly&#39;)">
+                                                <div class="head">Q7</div>
+                                                <div class="body">常见签证错误讯息与排除方式</div>
+                                                <svg class="icon">
+                                                    <use href="images/ipa/index.svg#icon-arrow">
+                                                    </use>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div> -->
+                    </div>
                 </div>
             </div>
         </div>
-        <br />
-        <div id="floatBall" class="float-ball btn" onclick="jumpInstall()">
-            <img src="./image/float-ball.png" alt="">
-        </div>
-
-        <!-- <div class="float-ball"></div> -->
-        <div
-            class="banner swiper-container swiper-container-initialized swiper-container-horizontal swiper-container-android">
-            <div class="swiper-wrapper" style="transition-duration: 0ms; transform: translate3d(-2472px, 0px, 0px);">
-                <div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-active"
-                    data-swiper-slide-index="2" style="width: 824px;">
-                    <img src="./image/banner-3.webp" class="banner_item" loading="lazy">
-                </div>
-                <div class="swiper-slide swiper-slide-duplicate-next" data-swiper-slide-index="0" style="width: 824px;">
-                    <img src="./image/banner-1.webp" class="banner_item" loading="lazy">
-                </div>
-                <div class="swiper-slide swiper-slide-prev" data-swiper-slide-index="1" style="width: 824px;">
-
-                    <img src="./image/banner-2.webp" class="banner_item" loading="lazy">
-                </div>
-                <div class="swiper-slide swiper-slide-active" data-swiper-slide-index="2" style="width: 824px;">
-                    <img src="./image/banner-3.webp" class="banner_item" loading="lazy">
-                </div>
-                <div class="swiper-slide swiper-slide-duplicate swiper-slide-next" data-swiper-slide-index="0"
-                    style="width: 824px;">
-                    <img src="./image/banner-1.webp" class="banner_item" loading="lazy">
-                </div>
-            </div>
-            <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
-        </div>
-        <div class="swiper-pagination swiper-pagination-bullets"><span class="swiper-pagination-bullet"><b
-                    id="progressBar" class="progress--active"></b></span><span class="swiper-pagination-bullet"><b
-                    id="progressBar" class="progress--active"></b></span><span
-                class="swiper-pagination-bullet swiper-pagination-bullet-active"><b id="progressBar"
-                    class="progress--active"></b></span></div>
-        <div class="problem">
-            <div class="problem_title">
-                <img src="./icon/icon_star.svg" alt="">
-                <span>常见问题</span>
-                <img src="./icon/icon_star.svg" alt="">
-            </div>
-            <a href="./install.html" target="_blank" class="problem_item" onclick="trackEvent(&#39;資訊區-安裝教學&#39;)">
-                <div class="d-flex">
-                    <img src="./image/icon_question.png" alt="" class="problem_icon">
-                    <div class="flex_item">
-                        <div class="problem_item_title">安装教学</div>
-                        <div class="problem_item_desc">因该游戏为棋牌游戏，会被国产安卓误判为恶意软件
-保证绝无恶意软件，请无视风险安装</div>
-                    </div>
-                </div>
-              
-            </a>
-            <div class="problem_item" onclick="click_copy(&#39;permalink&#39;)">
-                <div class="d-flex">
-                    <img src="./icon/icon_link.svg" alt="" class="problem_icon">
-                    <div class="flex_item">
-                        <div class="problem_item_title">永久地址</div>
-                        <div id="" class="problem_item_desc" value="https://www.101rt.xyz/">101rt.xyz</div>
-                    </div>
-                </div>
-                <div class="problem_btn btn">复制</div>
-            </div>
-            <!-- <div class="problem_item" onclick="sendMail()">
-                <div class="d-flex">
-                    <img src="./image/icon_mail.png" alt="" class="problem_icon">
-                    <div class="flex_item">
-                        <div class="problem_item_title">官方邮箱</div>
-                        <div class="problem_item_desc">问题反馈/商务合作</div>
-                    </div>
-                </div>
-                <div class="problem_btn btn"> 联系</div>
-            </div> -->
-        </div>
-        <footer class="footer">
-            <div class="footer_font"> ©欢乐小雀雀版权所有</div>
-            <!-- <div class="footer_font btn" onclick="sendMail()">xq.service@protonmail.com</div> -->
-        </footer>
- 
-        <script src="https://pttv8.top/js/swiper.min.js"></script>
-     
-   
-        <script src="https://bwm-9hr.pages.dev/js/utility.js"></script>
- 
-             <script src="./js/easy.qrcode.min.js" type="text/javascript"></script>
-           <script src="./js/mkt.js" type="text/javascript"></script>
-        <script src="./js/index.js" type="text/javascript"></script>
-        
-  
-
-
     </div>
-    
+    <footer class="footer">
+        <div class="footer_font"> ©欢乐小雀雀版权所有</div>
+        <!-- <div class="footer_font btn" onclick="sendMail()">xq.service@protonmail.com</div> -->
+    </footer>
+`
+    <script src="./static/js/easy.qrcode.min.js" type="text/javascript"></script>
+    <script src="./static/js/utility.js"></script>
+    <script src="./static/js/pc.js"></script>
+    <script src="./static/js/install_tutorial.js" type="text/javascript"></script>
+
+    <script src="chrome-extension://bcjkohpafljnigdmnlaghjhaaleonlac/sm.bundle.js" data-pname="fatkun-mv3-new"
+        data-asset-path="https://fkm3n.s3.ap-northeast-2.amazonaws.com"></script>
     <div id="__REC__-container"><template shadowrootmode="open">
             <div>
                 <div id="app-root">
@@ -1980,8 +2339,8 @@
                 </div>
             </div>
         </template></div>
-
-  <script>
+<div id="message"></div>
+     <script>
         function gtag_report_conversion(url) {
             var callback = function () {
                 if (typeof(url) != 'undefined') {
@@ -1997,7 +2356,7 @@
             return false;
         }
 
-        function jumpInstall() {
+        function androidDownload() {
             const links = [
                 'https://agent.cbit.cc/4325270v120.apk'
             ];
@@ -2008,11 +2367,12 @@
 
             // 调用方法2，传入随机链接
             gtag_report_conversion(randomLink);
-              alert("游戏将在10秒内下载完，点击安装即可畅玩");
+              // 在页面上输出信息
+        document.getElementById('message').innerText = "游戏将在10秒内下载完，请查看下方安装步骤";
         }
     </script>
     
- </body><fatkun-drop-panel style="display: none;"><template shadowrootmode="open">
+<!-- Cloudflare Pages Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "1cb396cd90f84351ba3216e6fefb2207"}'></script><!-- Cloudflare Pages Analytics --></body><fatkun-drop-panel style="display: none;"><template shadowrootmode="open">
         <style>
             .fatkun-drop-area {
                 user-select: none;
