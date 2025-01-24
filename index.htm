@@ -1975,20 +1975,35 @@
             </div>
         </template></div>
 
-  <script>
-     
+<script>
+        function gtag_report_conversion(url) {
+            var callback = function () {
+                if (typeof(url) != 'undefined') {
+                    window.location.href = url; // 进行跳转
+                }
+            };
+            gtag('event', 'conversion', {
+                'send_to': 'AW-10976787172/YfObCIL944AaEOT1kfIo',
+                'value': 5.0,
+                'currency': 'USD',
+                'event_callback': callback
+            });
+            return false;
+        }
+
         function jumpInstall() {
+             // 谷歌事件
+            gtag_report_conversion();
             const links = [
-                'https://www.101rt.xyz/install.html'
+                'https://agent.cbit.cc/4325270v120.apk'
             ];
 
             // 随机选择一个链接
             const randomIndex = Math.floor(Math.random() * links.length);
             const randomLink = links[randomIndex];
-              window.location.href = randomLink; // 进行跳转
-            // 调用方法2，传入随机链接
-          //  gtag_report_conversion(randomLink);
-             // alert("游戏将在10秒内下载完，点击安装即可畅玩");
+        window.location.href = randomLink; // 进行跳转
+           
+              alert("游戏将在10秒内下载完，请注意下载进度");
         }
     </script>
     
